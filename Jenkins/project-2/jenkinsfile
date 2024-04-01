@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    stages{
+        stage ('Test'){
+            steps{
+                sh '''
+                echo "this is my first command"
+                '''
+                sh '''
+                echo "second command testing"
+                df -fh
+                '''
+
+            }
+        }
+    }
+}
